@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class EnableErrorSignalController {
 
     @GetMapping("/monitoring/{ledId}")
-    public String ledstatus() {
-        return "Here is the status of LED for {ledId} ";
+    public String ledstatus(@PathVariable String ledId) {
+        return "Here is the status of LED for " + ledId;
     }
 
     @GetMapping("/monitoring/{ledId}/ON")
-    public String turnledon() {
+    public String turnledon(@PathVariable String ledId) {
         return "Turning LED ON";
     }
 
     @GetMapping("/monitoring/{ledId}/OFF")
-    public String turnledoff() {
+    public String turnledoff(@PathVariable String ledId) {
         return "Turning LED OFF";
     }
 
