@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class EnableErrorSignalController {
 
-    @GetMapping("/monitoring/{ledId}")
-    public String ledstatus(@PathVariable String ledId) {
-        return "Here is the status of LED for " + ledId;
+    @GetMapping("/monitoring/{id}")
+
+    public String ledstatus(@PathVariable String id , Model model) {
+        model.addAttribute("id", ledId);
+        return "Here is the status of LED with id" + ledId;
     }
 
     @GetMapping("/monitoring/{ledId}/ON")
