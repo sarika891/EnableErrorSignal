@@ -2,9 +2,34 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="mcv" />
+      <option name="name" value="mcv" />
+      <option name="url" value="https://nexus3.rabobank.nl/repository/maven-public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="mcv" />
       <option name="name" value="mcv" />
       <option name="url" value="https://maven.rabobank.nl/nexus/content/repositories/mcv-release/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="pi4j-repository" />
+      <option name="name" value="pi4j-repository" />
+      <option name="url" value="https://nexus3.rabobank.nl/repository/maven-public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="rabo-snapshots" />
+      <option name="name" value="rabo-snapshots" />
+      <option name="url" value="https://nexus3.rabobank.nl/repository/maven-public" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
