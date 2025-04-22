@@ -6,7 +6,6 @@ import com.pi4j.io.gpio.digital.DigitalOutput;
 import com.pi4j.io.gpio.digital.DigitalState;
 import com.pi4j.io.gpio.digital.PullResistance;
 import com.pi4j.util.Console;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 

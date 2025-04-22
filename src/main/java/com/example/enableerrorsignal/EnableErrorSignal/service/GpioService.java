@@ -1,0 +1,44 @@
+package com.example.enableerrorsignal.EnableErrorSignal.service;
+
+import com.pi4j.Pi4J;
+import com.pi4j.context.Context;
+import com.pi4j.io.gpio.digital.DigitalOutput;
+import com.pi4j.io.gpio.digital.DigitalOutputConfigBuilder;
+import com.pi4j.io.gpio.digital.DigitalState;
+import org.springframework.stereotype.Service;
+
+@Service
+public class GpioService {
+
+    private final Context pi4j;
+    private final DigitalOutput redLed;
+    private final DigitalOutput greenLed;
+
+    public GpioService() {
+        pi4j = Pi4J.newAutoContext();
+        DigitalOutputConfigBuilder redConfig = DigitalOutput.newConfigBuilder(pi4j)
+                .id("red-led")
+                .name("Red LED")
+                .address(1)
+                .shutdown(DigitalState.LOW);
+
+        DigitalOutputConfigBuilder greenConfig = DigitalOutput.newConfigBuilder(pi4j)
+                .id("green-led")
+                .name("Green LED")
+                .address(2)
+                .shutdown(DigitalState.LOW);
+
+        redLed = pi4j.create(redConfig);
+        greenLed = pi4j.create(greenConfig);
+    }
+
+    public void turnOnRedLight() {
+        redLed.high();
+        greenLed.low();
+    }
+
+    public void turnOnGreenLight() {
+        greenLed.high();
+        redLed.low();
+    }
+}

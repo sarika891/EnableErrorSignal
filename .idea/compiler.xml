@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="EnableErrorSignal" options="-parameters" />
+      <module name="EnableErrorSignal" options="-parameters -Werror" />
     </option>
   </component>
 </project>
