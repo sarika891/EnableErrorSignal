@@ -19,13 +19,13 @@ public class GpioService {
         DigitalOutputConfigBuilder redConfig = DigitalOutput.newConfigBuilder(pi4j)
                 .id("red-led")
                 .name("Red LED")
-                .address(1)
+                .address(2)
                 .shutdown(DigitalState.LOW);
 
         DigitalOutputConfigBuilder greenConfig = DigitalOutput.newConfigBuilder(pi4j)
                 .id("green-led")
                 .name("Green LED")
-                .address(2)
+                .address(3)
                 .shutdown(DigitalState.LOW);
 
         redLed = pi4j.create(redConfig);
