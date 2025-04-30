@@ -1,4 +1,4 @@
-package com.example.enableerrorsignal.EnableErrorSignal.webservice;
+package com.example.enableerrorsignal.EnableErrorSignal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

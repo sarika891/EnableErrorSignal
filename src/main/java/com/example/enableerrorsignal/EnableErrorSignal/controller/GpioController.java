@@ -1,9 +1,13 @@
 package com.example.enableerrorsignal.EnableErrorSignal.controller;
 
 import com.example.enableerrorsignal.EnableErrorSignal.service.GpioService;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@ComponentScan
 @RequestMapping("/api/gpio")
 public class GpioController {
 
