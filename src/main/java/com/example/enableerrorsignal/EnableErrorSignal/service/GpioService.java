@@ -18,9 +18,9 @@ public class GpioService {
     public GpioService() {
         pi4j = Pi4J.newAutoContext();
 
-        if (!pi4j.registry().exists("gpio")) {
+     /*   if (!pi4j.registry().exists("gpio")) {
             throw new IllegalStateException("No GPIO chip initialized! Ensure you are running on a Raspberry Pi with proper permissions.");
-        }
+        }*/
         DigitalOutputConfigBuilder redConfig = DigitalOutput.newConfigBuilder(pi4j)
                 .id("red-led")
                 .name("Red LED")
