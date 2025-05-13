@@ -26,4 +26,14 @@ public class GpioController {
     public void StartGreenLight() {
         gpioService.turnOnGreenLight();
     }
+
+    @PostMapping("/red/off")
+    public void turnOffRedLight() {
+        gpioService.turnOffRedLight();
+    }
+
+    @PostMapping("/green/off")
+    public void turnOffGreenLight() {
+        gpioService.turnOffGreenLight();
+    }
 }

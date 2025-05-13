@@ -46,4 +46,12 @@ public class GpioService {
         greenLed.high();
         redLed.low();
     }
+
+    public void turnOffRedLight() {
+        redLed.low();
+    }
+
+    public void turnOffGreenLight() {
+        greenLed.low();
+    }
 }
