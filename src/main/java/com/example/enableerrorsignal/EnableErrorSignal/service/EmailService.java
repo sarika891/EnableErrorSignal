@@ -1,5 +1,6 @@
 package com.example.enableerrorsignal.EnableErrorSignal.service;
 
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import javax.mail.*;
@@ -8,10 +9,17 @@ import java.util.Properties;
 @Service
 public class EmailService {
 
-    public boolean checkForAlertEmail() {
-        String host = "imap.gmail.com"; // Replace with your mail server
-        String username = "sarikachawla89@gmail.com"; // Replace with your email
-        String password = "Genpact@12"; // Replace with your password
+    private final GpioService gpioService;
+
+    public EmailService(GpioService gpioService) {
+        this.gpioService = gpioService;
+    }
+
+    @Scheduled(fixedRate = 60000) // Runs every 60 seconds
+    public void checkMailboxPeriodically() {
+        String host = "imap.gmail.com";
+        String username = "sarikachawla89@gmail.com";
+        String password = "Genpact@12";
 
         try {
             Properties properties = new Properties();
@@ -36,7 +44,8 @@ public class EmailService {
             Message[] messages = inbox.getMessages();
             for (Message message : messages) {
                 if (message.getSubject().contains("Alert")) {
-                    return true;
+                    gpioService.turnOnRedLight();
+                    break;
                 }
             }
 
@@ -45,7 +54,5 @@ public class EmailService {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return false;
     }
 }
