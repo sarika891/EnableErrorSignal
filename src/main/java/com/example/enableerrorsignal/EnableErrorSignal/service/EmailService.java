@@ -9,17 +9,17 @@ import java.util.Properties;
 @Service
 public class EmailService {
 
-    private final GpioService gpioService;
+    private final GpioServiceInterface gpioService;
 
-    public EmailService(GpioService gpioService) {
+    public EmailService(GpioServiceInterface gpioService) {
         this.gpioService = gpioService;
     }
 
     @Scheduled(fixedRate = 60000) // Runs every 60 seconds
     public void checkMailboxPeriodically() {
-        String host = "imap.gmail.com";
-        String username = "sarikachawla89@gmail.com";
-        String password = "Genpact@12";
+        String host = "imap.mail.yahoo.com";
+        String username = "sarikachawla23";
+        String password = "Nushku@12";
 
         try {
             Properties properties = new Properties();
@@ -34,6 +34,8 @@ public class EmailService {
                     return new PasswordAuthentication(username, password);
                 }
             });
+
+            System.out.println("Connecting to email server...");
 
             Store store = session.getStore("imaps");
             store.connect();

@@ -6,10 +6,12 @@ import com.pi4j.io.gpio.digital.DigitalOutput;
 import com.pi4j.io.gpio.digital.DigitalOutputConfigBuilder;
 import com.pi4j.io.gpio.digital.DigitalState;
 import com.pi4j.io.gpio.digital.DigitalStateChangeEvent;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GpioService {
+@Profile("!local")
+public class GpioService implements GpioServiceInterface {
 
     private final Context pi4j;
     private final DigitalOutput redLed;

@@ -1,7 +1,9 @@
 package com.example.enableerrorsignal.EnableErrorSignal.controller;
 
-import com.example.enableerrorsignal.EnableErrorSignal.service.GpioService;
+import com.example.enableerrorsignal.EnableErrorSignal.service.EmailService;
+import com.example.enableerrorsignal.EnableErrorSignal.service.GpioServiceInterface;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,10 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/gpio")
 public class GpioController {
 
-    private final GpioService gpioService;
+    private final GpioServiceInterface gpioService;
+    private final EmailService emailService;
 
-    public GpioController(GpioService gpioService) {
+    public GpioController(GpioServiceInterface gpioService,
+                          EmailService emailService) {
         this.gpioService = gpioService;
+        this.emailService = emailService;
     }
 
     @PostMapping("/red/blink")
@@ -35,5 +40,13 @@ public class GpioController {
     @PostMapping("/green/off")
     public void turnOffGreenLight() {
         gpioService.turnOffGreenLight();
+    }
+
+    @GetMapping ("/email")
+    public void reademail() {
+        // This method is a placeholder for email functionality
+        // You can implement the logic to read emails here
+        emailService.checkMailboxPeriodically();
+        System.out.println("Reading email.");
     }
 }
