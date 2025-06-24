@@ -1,9 +1,12 @@
 package com.example.enableerrorsignal.EnableErrorSignal.service;
 
-import org.springframework.scheduling.annotation.Scheduled;
+import com.sun.mail.imap.IMAPFolder;
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 
 import javax.mail.*;
+import javax.mail.event.MessageCountEvent;
+import javax.mail.event.MessageCountListener;
 import java.util.Properties;
 
 @Service
@@ -14,13 +17,12 @@ public class EmailService {
     public EmailService(GpioServiceInterface gpioService) {
         this.gpioService = gpioService;
     }
-
-    @Scheduled(fixedRate = 60000) // Runs every 60 seconds
-    public void checkMailboxPeriodically() {
-        String host = "imap.mail.yahoo.com";
-        String username = "sarikachawla23";
-        String password = "Nushku@12";
-
+    @PostConstruct
+    public void listenForNewEmails() throws MessagingException {
+        String host = "mail.mailo.com";
+        String username = "paleaccidentallyconsidering@mailo.com";
+        String password = "hBWA_P492sk:";
+        System.out.println("Starting email listener...");
         try {
             Properties properties = new Properties();
             properties.put("mail.store.protocol", "imaps");
@@ -35,26 +37,46 @@ public class EmailService {
                 }
             });
 
-            System.out.println("Connecting to email server...");
-
             Store store = session.getStore("imaps");
             store.connect();
 
-            Folder inbox = store.getFolder("INBOX");
-            inbox.open(Folder.READ_ONLY);
+            Folder folder = store.getFolder("INBOX");
+            if (folder instanceof IMAPFolder) {
+                IMAPFolder inbox = (IMAPFolder) folder;
+                inbox.open(Folder.READ_WRITE);
 
-            Message[] messages = inbox.getMessages();
-            for (Message message : messages) {
-                if (message.getSubject().contains("Alert")) {
-                    gpioService.turnOnRedLight();
-                    break;
+                inbox.addMessageCountListener(new MessageCountListener() {
+                    @Override
+                    public void messagesAdded(MessageCountEvent event) {
+                        for (Message message : event.getMessages()) {
+                            try {
+                                System.out.println("New Email Subject: " + message.getSubject());
+                                // gpioProcess the email (e.g., trigger GPIO actions)
+                                gpioService.turnOnRedLight(); // Example action
+                                System.out.println("Red light blink method triggered.");
+                            } catch (MessagingException e) {
+                                System.err.println("Error reading email subject: " + e.getMessage());
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void messagesRemoved(MessageCountEvent event) {
+                        // Handle message removal if needed
+                    }
+                });
+
+                System.out.println("Listening for new emails...");
+                try {
+                    while (true) {
+                        inbox.idle();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
-
-            inbox.close(false);
-            store.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (MessagingException e) {
+            System.err.println("Error connecting to email server: " + e.getMessage());
         }
     }
 }
