@@ -46,7 +46,7 @@ public class GpioController {
     public void reademail() {
         // This method is a placeholder for email functionality
         // You can implement the logic to read emails here
-        emailService.checkMailboxPeriodically();
-        System.out.println("Reading email.");
+       // emailService.checkMailboxPeriodically();
+       // System.out.println("Reading email.");
     }
 }
