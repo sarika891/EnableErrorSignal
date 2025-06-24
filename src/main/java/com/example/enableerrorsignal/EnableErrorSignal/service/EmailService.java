@@ -8,16 +8,30 @@ import javax.mail.*;
 import javax.mail.event.MessageCountEvent;
 import javax.mail.event.MessageCountListener;
 import java.util.Properties;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @Service
 public class EmailService {
 
     private final GpioServiceInterface gpioService;
+    private final ExecutorService executorService = Executors.newSingleThreadExecutor();
 
     public EmailService(GpioServiceInterface gpioService) {
         this.gpioService = gpioService;
     }
+
     @PostConstruct
+    public void startEmailListenerInBackground() {
+        executorService.submit(() -> {
+            try {
+                listenForNewEmails();
+            } catch (MessagingException e) {
+                System.err.println("Error starting email listener: " + e.getMessage());
+            }
+        });
+    }
+
     public void listenForNewEmails() throws MessagingException {
         String host = "mail.mailo.com";
         String username = "paleaccidentallyconsidering@mailo.com";
@@ -51,9 +65,8 @@ public class EmailService {
                         for (Message message : event.getMessages()) {
                             try {
                                 System.out.println("New Email Subject: " + message.getSubject());
-                                // // gpioProcess the email (e.g., trigger GPIO actions)
-                                 gpioService.turnOnRedLight(); // Example action
-                                 System.out.println("Red light blink method triggered.");//Process the email (e.g., trigger GPIO actions)
+                                gpioService.turnOnRedLight();
+                                System.out.println("Red light blink method triggered.");
                             } catch (MessagingException e) {
                                 System.err.println("Error reading email subject: " + e.getMessage());
                             }
