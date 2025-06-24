@@ -51,9 +51,9 @@ public class EmailService {
                         for (Message message : event.getMessages()) {
                             try {
                                 System.out.println("New Email Subject: " + message.getSubject());
-                                // gpioProcess the email (e.g., trigger GPIO actions)
-                                gpioService.turnOnRedLight(); // Example action
-                                System.out.println("Red light blink method triggered.");
+                                // // gpioProcess the email (e.g., trigger GPIO actions)
+                                 gpioService.turnOnRedLight(); // Example action
+                                 System.out.println("Red light blink method triggered.");//Process the email (e.g., trigger GPIO actions)
                             } catch (MessagingException e) {
                                 System.err.println("Error reading email subject: " + e.getMessage());
                             }
