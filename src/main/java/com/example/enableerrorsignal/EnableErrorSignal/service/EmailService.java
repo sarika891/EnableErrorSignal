@@ -4,7 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import jakarta.mail.*;
+import javax.mail.*;
+import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.Properties;
@@ -37,8 +38,10 @@ public class EmailService {
             }
             inbox.close(false);
             emailReadingClient.close();
+        } catch (MessagingException e) {
+            log.error("MessagingException occurred: {}", e.getMessage());
         } catch (Exception e) {
-            log.error(e.getMessage());
+            log.error("An unexpected error occurred: {}", e.getMessage());
         }
         log.info("===========================================");
     }
@@ -54,7 +57,7 @@ public class EmailService {
     }
 
     private boolean isMessageRecent(Date sentDate) {
-        return new Date().toInstant().minus(5, ChronoUnit.MINUTES)
+        return Instant.now().minus(5, ChronoUnit.MINUTES)
                 .isBefore(sentDate.toInstant());
     }
 
@@ -69,7 +72,6 @@ public class EmailService {
         inbox.open(Folder.READ_ONLY);
         return inbox;
     }
-
 
     private Session getAuthenticationSession() {
         String host = "mail.mailo.com";
