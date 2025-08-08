@@ -12,7 +12,7 @@ public class EmailReaderScheduler {
         this.emailService = emailService;
     }
 
-    @Scheduled(fixedRate = 30000, initialDelay = 1000)
+    @Scheduled(fixedRate = 30000, initialDelay = 30000)
     public void checkMailboxPeriodically() {
         emailService.checkEmail();
     }

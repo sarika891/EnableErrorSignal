@@ -2,6 +2,7 @@ package com.example.enableerrorsignal.EnableErrorSignal.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import javax.mail.*;
@@ -20,7 +21,9 @@ public class EmailService {
         this.gpioService = gpioService;
     }
 
+    @Scheduled(initialDelay = 300000, fixedDelay = 300000) // Initial delay of 5 minutes, then runs every 5 minutes
     public void checkEmail() {
+        log.info("Scheduled task triggered at: {}", Instant.now());
         log.info("===========================================");
         log.info("Checking email...");
         try {
