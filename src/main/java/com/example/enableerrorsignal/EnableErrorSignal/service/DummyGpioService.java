@@ -1,5 +1,7 @@
 package com.example.enableerrorsignal.EnableErrorSignal.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -7,26 +9,26 @@ import org.springframework.stereotype.Service;
 @Profile("local")
 public class DummyGpioService implements GpioServiceInterface{
 
-
+    private static final Logger log = LoggerFactory.getLogger(DummyGpioService.class);
     public DummyGpioService() {
 
     }
 
     public void turnOnRedLight() {
-        System.out.println("Red light turned on");
+        log.info("Red light turned on");
     }
 
     public void turnOnGreenLight() {
-        System.out.println("Red light turned on");
+        log.info("Green light turned on");
     }
 
     public void turnOffRedLight() {
 
-        System.out.println("Red light turned of");
+        log.info("Red light turned off");
     }
 
     public void turnOffGreenLight() {
 
-        System.out.println("Red light turned off");
+        log.info("Green light turned off");
     }
 }

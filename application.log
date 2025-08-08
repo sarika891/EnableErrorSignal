@@ -1,0 +1,926 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------< com.example.enableerrorsignal:EnableErrorSignal >-----------
+[INFO] Building EnableErrorSignal 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:3.3.0:run (default-cli) > test-compile @ EnableErrorSignal >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ EnableErrorSignal ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ EnableErrorSignal ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ EnableErrorSignal ---
+[INFO] skip non existing resourceDirectory /Users/sarikachawla/Documents/javacoding/gitrepo/EnableErrorSignal/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ EnableErrorSignal ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:3.3.0:run (default-cli) < test-compile @ EnableErrorSignal <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:3.3.0:run (default-cli) @ EnableErrorSignal ---
+[INFO] Attaching agents: []
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@4e515669]
+SLF4J(W): Found provider [org.slf4j.simple.SimpleServiceProvider@17d10166]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [ch.qos.logback.classic.spi.LogbackServiceProvider@4e515669]
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+2025-08-05T00:24:46.121+02:00  INFO 94436 --- [EnableErrorSignal] [           main] c.e.e.E.EnableErrorSignalApplication     : Starting EnableErrorSignalApplication using Java 21.0.6 with PID 94436 (/Users/sarikachawla/Documents/javacoding/gitrepo/EnableErrorSignal/target/classes started by sarikachawla in /Users/sarikachawla/Documents/javacoding/gitrepo/EnableErrorSignal)
+2025-08-05T00:24:46.127+02:00  INFO 94436 --- [EnableErrorSignal] [           main] c.e.e.E.EnableErrorSignalApplication     : The following 1 profile is active: "local"
+2025-08-05T00:24:49.913+02:00  INFO 94436 --- [EnableErrorSignal] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-08-05T00:24:49.959+02:00  INFO 94436 --- [EnableErrorSignal] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-05T00:24:49.959+02:00  INFO 94436 --- [EnableErrorSignal] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-08-05T00:24:50.154+02:00  INFO 94436 --- [EnableErrorSignal] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-05T00:24:50.159+02:00  INFO 94436 --- [EnableErrorSignal] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3863 ms
+2025-08-05T00:24:50.654+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.Pi4J                            : New auto context
+2025-08-05T00:24:50.655+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.Pi4J                            : New context builder
+2025-08-05T00:24:50.668+02:00  INFO 94436 --- [EnableErrorSignal] [           main] c.pi4j.boardinfo.util.BoardInfoHelper    : Detected OS: Name: Mac OS X, version: 15.5, architecture: x86_64
+2025-08-05T00:24:50.675+02:00  INFO 94436 --- [EnableErrorSignal] [           main] c.pi4j.boardinfo.util.BoardInfoHelper    : Detected Java: Version: 21.0.6, runtime: 21.0.6+7-LTS, vendor: Microsoft, vendor version: Microsoft-10800201
+2025-08-05T00:24:50.676+02:00 ERROR 94436 --- [EnableErrorSignal] [           main] c.p.boardinfo.datareader.CpuInfoReader   : Failed to read the CPU revision from '/proc/cpuinfo': IOException: /proc/cpuinfo (No such file or directory)
+2025-08-05T00:24:50.677+02:00 ERROR 94436 --- [EnableErrorSignal] [           main] c.pi4j.boardinfo.util.BoardInfoHelper    : Could not get the board version code: IOException: /proc/cpuinfo (No such file or directory)
+2025-08-05T00:24:50.686+02:00 ERROR 94436 --- [EnableErrorSignal] [           main] c.p.b.datareader.BoardCodeReader         : Failed to read the board model from '/proc/device-tree/model': IOException: /proc/device-tree/model (No such file or directory)
+2025-08-05T00:24:50.687+02:00 ERROR 94436 --- [EnableErrorSignal] [           main] c.pi4j.boardinfo.util.BoardInfoHelper    : Could not get the board name: IOException: /proc/device-tree/model (No such file or directory)
+2025-08-05T00:24:50.688+02:00  WARN 94436 --- [EnableErrorSignal] [           main] c.pi4j.boardinfo.util.BoardInfoHelper    : Sorry, could not detect the board type
+2025-08-05T00:24:50.779+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.context.impl.DefaultContext     : Detected board model: Unknown
+2025-08-05T00:24:50.779+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.context.impl.DefaultContext     : Running on: Name: Mac OS X, version: 15.5, architecture: x86_64
+2025-08-05T00:24:50.779+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.context.impl.DefaultContext     : With Java version: Version: 21.0.6, runtime: 21.0.6+7-LTS, vendor: Microsoft, vendor version: Microsoft-10800201
+2025-08-05T00:24:50.780+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.runtime.impl.DefaultRuntime     : Initializing Pi4J context/runtime...
+2025-08-05T00:24:50.815+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.runtime.impl.DefaultRuntime     : Replacing provider DIGITAL_INPUT RaspberryPi Digital Input (GPIO) Provider with priority 0 with provider GpioD Digital Input (GPIO) Provider with higher priority 150
+2025-08-05T00:24:50.817+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.runtime.impl.DefaultRuntime     : Replacing provider DIGITAL_OUTPUT RaspberryPi Digital Output (GPIO) Provider with priority 0 with provider GpioD Digital Output (GPIO) Provider with higher priority 150
+2025-08-05T00:24:50.824+02:00  WARN 94436 --- [EnableErrorSignal] [           main] c.p.library.gpiod.internal.GpioDContext  : Can't initialize GpioD context, board model is unknown
+2025-08-05T00:24:50.828+02:00  WARN 94436 --- [EnableErrorSignal] [           main] c.p.library.gpiod.internal.GpioDContext  : Can't initialize GpioD context, board model is unknown
+2025-08-05T00:24:50.828+02:00  INFO 94436 --- [EnableErrorSignal] [           main] c.p.p.impl.DefaultRuntimePlatforms       : adding platform to managed platform map [id=raspberrypi; name=RaspberryPi Platform; priority=5; class=com.pi4j.plugin.raspberrypi.platform.RaspberryPiPlatform]
+2025-08-05T00:24:50.829+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.runtime.impl.DefaultRuntime     : Pi4J context/runtime successfully initialized.
+2025-08-05T00:24:50.834+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.util.Console                    : --------------------
+2025-08-05T00:24:50.835+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.util.Console                    : |  Pi4J PLATFORMS  |
+2025-08-05T00:24:50.836+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.util.Console                    : --------------------
+2025-08-05T00:24:50.837+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.util.Console                    : 
+PLATFORMS: [1] "Pi4J Runtime Platforms" <com.pi4j.platform.impl.DefaultPlatforms> 
+└─PLATFORM: "RaspberryPi Platform" {raspberrypi} <com.pi4j.plugin.raspberrypi.platform.RaspberryPiPlatform> {Pi4J Platform for the RaspberryPi series of products.} 
+2025-08-05T00:24:50.840+02:00  INFO 94436 --- [EnableErrorSignal] [           main] com.pi4j.util.Console                    : 
+2025-08-05T00:24:52.150+02:00  INFO 94436 --- [EnableErrorSignal] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2025-08-05T00:24:52.372+02:00  INFO 94436 --- [EnableErrorSignal] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-08-05T00:24:52.410+02:00  INFO 94436 --- [EnableErrorSignal] [           main] c.e.e.E.EnableErrorSignalApplication     : Started EnableErrorSignalApplication in 7.522 seconds (process running for 8.783)
+2025-08-05T00:25:22.443+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-04T22:25:22.443432Z
+2025-08-05T00:25:22.444+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:25:22.445+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T00:25:25.821+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T00:25:25.822+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:25:52.420+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-04T22:25:52.420906Z
+2025-08-05T00:25:52.421+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:25:52.421+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T00:25:54.450+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T00:25:54.451+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:26:22.429+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-04T22:26:22.429262Z
+2025-08-05T00:26:22.429+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:26:22.429+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T00:26:24.342+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T00:26:24.342+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:26:52.428+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-04T22:26:52.428001Z
+2025-08-05T00:26:52.428+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:26:52.429+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T00:26:53.760+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T00:26:53.760+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:27:22.428+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-04T22:27:22.428546Z
+2025-08-05T00:27:22.429+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:27:22.429+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T00:27:24.093+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T00:27:24.094+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:27:52.435+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-04T22:27:52.435370Z
+2025-08-05T00:27:52.435+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:27:52.435+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T00:27:55.966+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : MessagingException occurred: * BYE JavaMail Exception: java.net.SocketException: Connection reset
+2025-08-05T00:27:55.967+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:28:22.429+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-04T22:28:22.429385Z
+2025-08-05T00:28:22.430+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:28:22.430+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T00:28:24.264+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T00:28:24.264+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:28:53.783+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-04T22:28:53.783657Z
+2025-08-05T00:28:53.784+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T00:28:53.784+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:17:50.152+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : MessagingException occurred: Couldn't connect to host, port: mail.mailo.com, 993; timeout -1
+2025-08-05T09:17:50.152+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:17:50.152+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:17:50.152766Z
+2025-08-05T09:17:50.153+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:17:50.153+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:17:50.262+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : MessagingException occurred: Couldn't connect to host, port: mail.mailo.com, 993; timeout -1
+2025-08-05T09:17:50.262+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:17:50.263+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:17:50.263531Z
+2025-08-05T09:17:50.263+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:17:50.264+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:17:50.266+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : MessagingException occurred: Couldn't connect to host, port: mail.mailo.com, 993; timeout -1
+2025-08-05T09:17:50.266+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:17:50.268+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:17:50.268498Z
+2025-08-05T09:17:50.268+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:17:50.268+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:17:50.270+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : MessagingException occurred: Couldn't connect to host, port: mail.mailo.com, 993; timeout -1
+2025-08-05T09:17:50.289+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:18:03.788+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:18:03.788776Z
+2025-08-05T09:18:03.789+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:18:03.789+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:21:26.268+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:21:26.268+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:21:48.279+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:21:48.279715Z
+2025-08-05T09:21:48.280+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:21:48.280+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:21:49.609+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:21:49.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:22:18.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:22:18.275663Z
+2025-08-05T09:22:18.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:22:18.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:22:19.352+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:22:19.352+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:22:48.276+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:22:48.276146Z
+2025-08-05T09:22:48.281+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:22:48.300+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:22:49.420+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:22:49.420+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:23:18.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:23:18.275250Z
+2025-08-05T09:23:18.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:23:18.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:23:19.519+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:23:19.519+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:23:48.276+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:23:48.276192Z
+2025-08-05T09:23:48.276+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:23:48.276+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:23:49.436+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:23:49.436+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:24:18.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:24:18.274968Z
+2025-08-05T09:24:18.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:24:18.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:24:19.263+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:24:19.263+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:24:48.273+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:24:48.273704Z
+2025-08-05T09:24:48.273+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:24:48.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:24:49.369+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:24:49.369+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:25:18.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:25:18.274530Z
+2025-08-05T09:25:18.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:25:18.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:25:19.538+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:25:19.538+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:25:48.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:25:48.274280Z
+2025-08-05T09:25:48.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:25:48.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:25:49.327+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:25:49.327+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:26:04.780+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:26:04.780112Z
+2025-08-05T09:26:04.780+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:26:04.780+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:26:06.512+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:26:06.512+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:26:18.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:26:18.274194Z
+2025-08-05T09:26:18.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:26:18.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:26:19.566+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:26:19.566+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:26:48.273+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:26:48.273679Z
+2025-08-05T09:26:48.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:26:48.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:26:49.185+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:26:49.185+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:27:18.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:27:18.274746Z
+2025-08-05T09:27:18.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:27:18.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:27:19.236+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:27:19.236+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:27:48.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:27:48.274595Z
+2025-08-05T09:27:48.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:27:48.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:27:49.545+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:27:49.545+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:28:18.273+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:28:18.273575Z
+2025-08-05T09:28:18.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:28:18.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:28:20.398+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:28:20.398+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:28:48.273+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:28:48.273367Z
+2025-08-05T09:28:48.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:28:48.274+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:28:50.091+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:28:50.091+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:29:18.269+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:29:18.269134Z
+2025-08-05T09:29:18.269+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:29:18.269+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:29:19.382+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:29:19.382+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:29:48.278+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:29:48.278057Z
+2025-08-05T09:29:48.278+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:29:48.278+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:29:52.483+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:29:52.484+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:30:18.275+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:30:18.275677Z
+2025-08-05T09:30:18.276+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:30:18.276+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:30:19.283+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:30:19.283+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:30:48.272+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:30:48.272256Z
+2025-08-05T09:30:48.272+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:30:48.272+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:30:50.335+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:30:50.336+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:31:06.515+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:31:06.515003Z
+2025-08-05T09:31:06.515+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:31:06.515+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:31:07.831+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:31:07.831+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:31:18.270+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:31:18.270246Z
+2025-08-05T09:31:18.270+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:31:18.270+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:31:19.172+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:31:19.173+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:34:54.288+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:34:54.281522Z
+2025-08-05T09:34:54.307+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:34:54.309+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:34:59.934+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:34:59.936+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:35:24.129+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:35:24.129831Z
+2025-08-05T09:35:24.130+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:35:24.130+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:35:25.473+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:35:25.473+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:36:54.612+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:36:54.612686Z
+2025-08-05T09:36:54.614+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:36:54.615+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:36:56.327+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:36:56.328+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:37:24.618+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:37:24.618675Z
+2025-08-05T09:37:24.620+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:37:24.621+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:37:27.196+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:37:27.197+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:37:54.611+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:37:54.611601Z
+2025-08-05T09:37:54.612+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:37:54.613+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:37:56.093+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:37:56.093+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:38:24.608+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:38:24.608767Z
+2025-08-05T09:38:24.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:38:24.610+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:38:25.409+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:38:25.409+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:38:54.612+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:38:54.610871Z
+2025-08-05T09:38:54.613+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:38:54.614+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:38:55.714+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:38:55.714+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:39:24.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:39:24.609876Z
+2025-08-05T09:39:24.610+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:39:24.610+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:39:26.026+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:39:26.026+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:39:54.611+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:39:54.611352Z
+2025-08-05T09:39:54.612+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:39:54.612+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:39:55.908+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:39:55.908+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:40:14.178+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:40:14.178885Z
+2025-08-05T09:40:14.179+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:40:14.179+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:40:15.504+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:40:15.504+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:40:24.610+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:40:24.610663Z
+2025-08-05T09:40:24.611+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:40:24.612+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:40:28.917+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:40:28.919+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:40:54.610+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:40:54.610868Z
+2025-08-05T09:40:54.613+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:40:54.613+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:40:56.220+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:40:56.221+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:41:24.608+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:41:24.608634Z
+2025-08-05T09:41:24.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:41:24.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:41:25.925+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:41:25.925+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:41:54.610+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:41:54.610529Z
+2025-08-05T09:41:54.611+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:41:54.612+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:41:55.947+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:41:55.947+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:42:24.612+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:42:24.611978Z
+2025-08-05T09:42:24.612+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:42:24.613+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:42:25.774+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:42:25.775+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:42:54.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:42:54.609176Z
+2025-08-05T09:42:54.610+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:42:54.611+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:42:56.320+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:42:56.321+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:43:24.608+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:43:24.608322Z
+2025-08-05T09:43:24.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:43:24.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:43:25.824+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:43:25.825+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:43:54.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:43:54.608309Z
+2025-08-05T09:43:54.610+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:43:54.610+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:43:55.914+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:43:55.914+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:44:24.608+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:44:24.608120Z
+2025-08-05T09:44:24.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:44:24.610+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:44:27.154+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:44:27.154+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:44:54.605+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:44:54.605658Z
+2025-08-05T09:44:54.606+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:44:54.608+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:44:56.651+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:44:56.654+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:45:15.507+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:45:15.507729Z
+2025-08-05T09:45:15.509+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:45:15.509+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:45:24.612+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:45:24.613+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:45:24.614+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:45:24.614630Z
+2025-08-05T09:45:24.615+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:45:24.615+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:45:25.771+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:45:25.771+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:45:54.607+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:45:54.607963Z
+2025-08-05T09:45:54.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:45:54.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:45:56.074+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:45:56.075+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:46:24.607+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:46:24.607558Z
+2025-08-05T09:46:24.608+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:46:24.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:46:26.513+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:46:26.514+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:46:54.606+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:46:54.606532Z
+2025-08-05T09:46:54.607+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:46:54.607+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:46:55.884+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:46:55.885+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:47:24.606+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:47:24.606865Z
+2025-08-05T09:47:24.607+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:47:24.609+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:47:27.020+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:47:27.020+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:47:54.606+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:47:54.606695Z
+2025-08-05T09:47:54.607+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:47:54.608+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:48:00.820+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:48:00.820+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:48:24.605+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:48:24.605585Z
+2025-08-05T09:48:24.605+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:48:24.605+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:48:25.834+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:48:25.834+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:48:54.605+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:48:54.605775Z
+2025-08-05T09:48:54.606+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:48:54.606+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:48:55.790+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:48:55.790+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:49:24.606+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:49:24.606172Z
+2025-08-05T09:49:24.607+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:49:24.607+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:49:26.102+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:49:26.103+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:49:54.604+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:49:54.604214Z
+2025-08-05T09:49:54.606+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:49:54.606+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:50:05.682+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:50:05.682+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:50:24.601+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:50:24.601677Z
+2025-08-05T09:50:24.602+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:50:24.602+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:50:27.259+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:50:27.260+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:50:27.262+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:50:27.262313Z
+2025-08-05T09:50:27.263+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:50:27.263+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:50:28.674+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:50:28.675+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:50:54.605+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:50:54.605141Z
+2025-08-05T09:50:54.605+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:50:54.605+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:50:55.701+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:50:55.702+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:51:24.602+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:51:24.602900Z
+2025-08-05T09:51:24.603+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:51:24.604+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:51:25.589+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:51:25.590+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:51:54.600+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:51:54.600712Z
+2025-08-05T09:51:54.601+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:51:54.602+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:51:56.624+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:51:56.624+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:52:24.600+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:52:24.600272Z
+2025-08-05T09:52:24.602+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:52:24.602+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:52:26.642+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:52:26.643+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:52:54.599+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:52:54.599194Z
+2025-08-05T09:52:54.600+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:52:54.600+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:52:56.325+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:52:56.326+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:53:24.601+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:53:24.601652Z
+2025-08-05T09:53:24.602+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:53:24.602+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:53:26.189+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:53:26.190+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:53:54.599+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:53:54.599051Z
+2025-08-05T09:53:54.600+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:53:54.601+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:54:00.694+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:54:00.695+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:54:24.598+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:54:24.598926Z
+2025-08-05T09:54:24.600+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:54:24.600+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:54:25.640+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:54:25.641+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:54:54.600+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:54:54.600574Z
+2025-08-05T09:54:54.601+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:54:54.602+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:54:55.908+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:54:55.908+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:55:24.601+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:55:24.601712Z
+2025-08-05T09:55:24.603+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:55:24.603+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:55:25.830+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:55:25.830+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:55:28.677+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:55:28.677036Z
+2025-08-05T09:55:28.677+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:55:28.677+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:55:30.133+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:55:30.133+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:55:54.599+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:55:54.599445Z
+2025-08-05T09:55:54.600+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:55:54.600+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:55:58.614+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:55:58.615+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:56:24.601+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:56:24.601289Z
+2025-08-05T09:56:24.602+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:56:24.603+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:56:25.732+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:56:25.732+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:56:54.599+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:56:54.599847Z
+2025-08-05T09:56:54.600+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:56:54.600+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:56:56.037+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:56:56.037+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:57:24.596+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:57:24.596430Z
+2025-08-05T09:57:24.596+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:57:24.598+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:57:25.637+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:57:25.638+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:57:54.578+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:57:54.578156Z
+2025-08-05T09:57:54.578+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:57:54.578+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:57:55.937+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:57:55.938+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:58:24.571+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:58:24.571561Z
+2025-08-05T09:58:24.572+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:58:24.572+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:58:26.064+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:58:26.065+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:58:54.567+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:58:54.567627Z
+2025-08-05T09:58:54.568+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:58:54.568+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:58:55.838+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:58:55.838+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:59:24.570+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:59:24.570009Z
+2025-08-05T09:59:24.570+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:59:24.570+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:59:26.312+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:59:26.313+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:59:54.567+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T07:59:54.567164Z
+2025-08-05T09:59:54.567+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T09:59:54.567+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T09:59:56.303+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T09:59:56.303+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:00:24.568+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:00:24.568501Z
+2025-08-05T10:00:24.568+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:00:24.568+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:00:25.950+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:00:25.951+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:00:30.106+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:00:30.106939Z
+2025-08-05T10:00:30.107+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:00:30.107+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:00:32.697+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:00:32.697+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:00:54.567+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:00:54.567905Z
+2025-08-05T10:00:54.568+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:00:54.568+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:00:55.905+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:00:55.906+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:01:24.565+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:01:24.565097Z
+2025-08-05T10:01:24.565+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:01:24.565+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:01:26.065+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:01:26.065+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:01:54.567+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:01:54.567301Z
+2025-08-05T10:01:54.567+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:01:54.567+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:01:55.648+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:01:55.648+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:02:24.566+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:02:24.566369Z
+2025-08-05T10:02:24.566+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:02:24.566+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:02:25.675+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:02:25.675+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:02:54.566+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:02:54.566652Z
+2025-08-05T10:02:54.566+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:02:54.566+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:02:55.714+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:02:55.714+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:03:24.567+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:03:24.567288Z
+2025-08-05T10:03:24.568+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:03:24.568+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:03:26.073+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:03:26.073+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:03:54.562+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:03:54.562886Z
+2025-08-05T10:03:54.563+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:03:54.563+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:03:55.699+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:03:55.699+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:04:24.567+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:04:24.567342Z
+2025-08-05T10:04:24.568+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:04:24.569+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:04:26.048+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:04:26.049+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:04:54.561+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:04:54.561708Z
+2025-08-05T10:04:54.562+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:04:54.563+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:05:33.000+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:05:33.002+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:05:33.004+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:05:33.004024Z
+2025-08-05T10:05:33.004+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:05:33.004+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:05:34.388+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:05:34.388+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:05:34.389+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:05:34.389627Z
+2025-08-05T10:05:34.390+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:05:34.390+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:05:35.983+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:05:35.983+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:05:54.562+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:05:54.562586Z
+2025-08-05T10:05:54.564+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:05:54.564+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:05:56.001+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:05:56.002+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:06:24.559+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:06:24.559674Z
+2025-08-05T10:06:24.561+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:06:24.561+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:06:26.484+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:06:26.484+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:06:54.563+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:06:54.563104Z
+2025-08-05T10:06:54.563+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:06:54.563+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:06:56.345+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:06:56.345+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:07:24.559+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:07:24.559254Z
+2025-08-05T10:07:24.559+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:07:24.559+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:07:25.537+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:07:25.537+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:07:54.561+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:07:54.561058Z
+2025-08-05T10:07:54.561+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:07:54.561+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:07:55.556+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:07:55.556+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:08:24.561+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:08:24.561100Z
+2025-08-05T10:08:24.561+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:08:24.561+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:08:25.656+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:08:25.656+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:08:54.561+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:08:54.561707Z
+2025-08-05T10:08:54.562+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:08:54.562+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:08:55.723+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:08:55.724+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:09:24.558+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:09:24.558235Z
+2025-08-05T10:09:24.558+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:09:24.558+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:09:25.874+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:09:25.874+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:09:54.559+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:09:54.559112Z
+2025-08-05T10:09:54.559+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:09:54.559+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:09:56.088+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:09:56.088+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:10:24.554+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:10:24.554469Z
+2025-08-05T10:10:24.554+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:10:24.554+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:10:25.950+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:10:25.950+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:10:35.982+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:10:35.982769Z
+2025-08-05T10:10:35.983+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:10:35.983+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:10:37.000+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:10:37.000+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:10:54.555+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:10:54.555427Z
+2025-08-05T10:10:54.555+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:10:54.555+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:10:56.055+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:10:56.055+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:11:24.557+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:11:24.557819Z
+2025-08-05T10:11:24.558+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:11:24.558+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:11:26.371+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:11:26.371+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:11:54.556+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:11:54.556886Z
+2025-08-05T10:11:54.557+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:11:54.557+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:11:55.910+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:11:55.910+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:12:24.557+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:12:24.556963Z
+2025-08-05T10:12:24.557+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:12:24.557+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:12:25.742+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:12:25.742+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:12:54.553+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:12:54.553773Z
+2025-08-05T10:12:54.554+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:12:54.554+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:13:11.176+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:13:11.177+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:13:24.567+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:13:24.567889Z
+2025-08-05T10:13:24.575+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:13:24.575+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:13:29.676+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:13:29.677+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:13:54.554+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:13:54.554292Z
+2025-08-05T10:13:54.554+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:13:54.554+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:13:56.528+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:13:56.528+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:14:24.550+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:14:24.550061Z
+2025-08-05T10:14:24.550+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:14:24.552+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:14:25.606+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:14:25.606+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:14:54.550+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:14:54.550213Z
+2025-08-05T10:14:54.550+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:14:54.550+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:14:55.566+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:14:55.566+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:15:24.553+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:15:24.553362Z
+2025-08-05T10:15:24.553+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:15:24.553+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:15:25.834+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:15:25.834+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:15:37.000+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:15:37.000455Z
+2025-08-05T10:15:37.001+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:15:37.001+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:15:38.032+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:15:38.033+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:15:54.545+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:15:54.545546Z
+2025-08-05T10:15:54.545+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:15:54.545+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:15:56.717+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:15:56.717+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:16:24.546+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:16:24.546375Z
+2025-08-05T10:16:24.546+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:16:24.546+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:16:25.589+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:16:25.590+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:16:54.546+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:16:54.546932Z
+2025-08-05T10:16:54.547+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:16:54.547+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:16:55.779+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:16:55.779+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:17:24.546+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:17:24.546573Z
+2025-08-05T10:17:24.546+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:17:24.546+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:17:32.001+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:17:32.001+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:17:54.542+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:17:54.542333Z
+2025-08-05T10:17:54.542+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:17:54.542+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:17:56.132+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:17:56.132+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:18:24.542+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:18:24.542543Z
+2025-08-05T10:18:24.542+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:18:24.543+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:18:25.696+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:18:25.696+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:18:54.546+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:18:54.546320Z
+2025-08-05T10:18:54.549+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:18:54.549+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:18:55.895+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:18:55.895+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:19:24.540+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:19:24.540242Z
+2025-08-05T10:19:24.540+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:19:24.540+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:19:25.460+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:19:25.460+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:19:54.543+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:19:54.543372Z
+2025-08-05T10:19:54.544+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:19:54.544+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:19:55.598+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:19:55.599+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:20:24.542+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:20:24.542373Z
+2025-08-05T10:20:24.543+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:20:24.543+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:20:25.917+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:20:25.917+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:20:38.027+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:20:38.027777Z
+2025-08-05T10:20:38.028+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:20:38.028+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:20:43.795+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:20:43.796+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:20:54.541+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:20:54.541579Z
+2025-08-05T10:20:54.542+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:20:54.542+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:20:56.093+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:20:56.093+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:21:24.539+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:21:24.539673Z
+2025-08-05T10:21:24.540+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:21:24.541+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:21:27.383+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:21:27.383+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:21:54.537+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:21:54.537575Z
+2025-08-05T10:21:54.538+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:21:54.538+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:21:55.811+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:21:55.812+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:22:24.536+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:22:24.536549Z
+2025-08-05T10:22:24.537+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:22:24.537+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:22:28.070+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:22:28.071+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:22:54.538+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:22:54.538399Z
+2025-08-05T10:22:54.539+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:22:54.540+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:22:55.971+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:22:55.971+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:23:24.538+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:23:24.538902Z
+2025-08-05T10:23:24.539+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:23:24.539+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:23:33.531+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:23:33.532+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:23:54.547+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:23:54.547129Z
+2025-08-05T10:23:54.547+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:23:54.547+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:23:56.335+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:23:56.336+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:24:24.537+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:24:24.537790Z
+2025-08-05T10:24:24.538+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:24:24.539+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:24:26.042+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:24:26.042+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:24:54.537+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:24:54.537104Z
+2025-08-05T10:24:54.538+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:24:54.538+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:25:00.404+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:25:00.404+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:25:24.534+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:25:24.534845Z
+2025-08-05T10:25:24.536+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:25:24.536+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:25:26.405+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:25:26.405+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:25:43.795+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:25:43.795568Z
+2025-08-05T10:25:43.796+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:25:43.796+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:25:45.155+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:25:45.155+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:25:54.537+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:25:54.537123Z
+2025-08-05T10:25:54.537+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:25:54.537+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:25:55.680+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:25:55.680+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:26:24.536+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:26:24.536781Z
+2025-08-05T10:26:24.538+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:26:24.538+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:26:25.747+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:26:25.747+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:26:54.534+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:26:54.534336Z
+2025-08-05T10:26:54.534+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:26:54.534+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:26:55.784+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:26:55.784+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:27:24.532+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:27:24.532326Z
+2025-08-05T10:27:24.532+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:27:24.532+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:27:25.638+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:27:25.639+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:27:54.533+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:27:54.533360Z
+2025-08-05T10:27:54.533+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:27:54.533+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:27:55.553+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:27:55.554+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:28:24.533+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:28:24.533394Z
+2025-08-05T10:28:24.534+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:28:24.535+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:28:26.065+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:28:26.065+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:28:54.530+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:28:54.530451Z
+2025-08-05T10:28:54.530+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:28:54.530+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:28:55.819+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:28:55.819+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:29:24.532+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:29:24.530776Z
+2025-08-05T10:29:24.534+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:29:24.535+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:29:25.699+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:29:25.699+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:29:54.529+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:29:54.529495Z
+2025-08-05T10:29:54.530+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:29:54.530+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:29:56.117+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:29:56.117+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:30:24.531+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:30:24.531722Z
+2025-08-05T10:30:24.532+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:30:24.532+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:30:26.200+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:30:26.200+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:30:45.155+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:30:45.155646Z
+2025-08-05T10:30:45.156+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:30:45.156+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:30:46.434+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:30:46.435+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:30:54.527+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:30:54.527818Z
+2025-08-05T10:30:54.528+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:30:54.528+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:30:56.042+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:30:56.044+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:31:24.529+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:31:24.529431Z
+2025-08-05T10:31:24.530+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:31:24.531+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:31:30.377+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:31:30.377+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:31:54.527+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:31:54.527493Z
+2025-08-05T10:31:54.528+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:31:54.528+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:31:56.007+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:31:56.007+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:32:24.527+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:32:24.527321Z
+2025-08-05T10:32:24.531+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:32:24.531+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:32:30.453+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:32:30.453+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:32:54.528+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:32:54.528212Z
+2025-08-05T10:32:54.528+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:32:54.528+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:32:56.162+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:32:56.162+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:33:24.529+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:33:24.528966Z
+2025-08-05T10:33:24.530+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:33:24.530+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:33:25.779+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:33:25.779+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:33:54.526+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:33:54.525963Z
+2025-08-05T10:33:54.526+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:33:54.526+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:33:56.801+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:33:56.802+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:34:24.526+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:34:24.526966Z
+2025-08-05T10:34:24.527+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:34:24.527+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:34:25.768+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:34:25.769+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:34:54.525+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:34:54.525746Z
+2025-08-05T10:34:54.527+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:34:54.527+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:34:55.908+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:34:55.908+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:35:24.524+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:35:24.524210Z
+2025-08-05T10:35:24.525+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:35:24.525+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:35:25.615+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:35:25.615+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:35:46.434+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:35:46.434244Z
+2025-08-05T10:35:46.435+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:35:46.435+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:35:47.642+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:35:47.642+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:35:54.524+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:35:54.524634Z
+2025-08-05T10:35:54.525+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:35:54.525+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:35:56.031+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:35:56.031+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:36:24.524+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:36:24.524801Z
+2025-08-05T10:36:24.525+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:36:24.525+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:36:26.000+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:36:26.000+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:36:54.524+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:36:54.524703Z
+2025-08-05T10:36:54.525+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:36:54.525+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:36:56.028+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:36:56.029+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:37:24.523+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Scheduled task triggered at: 2025-08-05T08:37:24.523173Z
+2025-08-05T10:37:24.523+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
+2025-08-05T10:37:24.523+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : Checking email...
+2025-08-05T10:37:30.991+02:00 ERROR 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : An unexpected error occurred: Cannot invoke "java.util.Date.toInstant()" because "sentDate" is null
+2025-08-05T10:37:30.992+02:00  INFO 94436 --- [EnableErrorSignal] [   scheduling-1] c.e.e.E.service.EmailService             : ===========================================
