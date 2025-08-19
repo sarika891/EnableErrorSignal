@@ -1,7 +1,9 @@
 package com.example.enableerrorsignal.EnableErrorSignal.controller;
 
+import com.example.enableerrorsignal.EnableErrorSignal.service.EmailReaderScheduler;
 import com.example.enableerrorsignal.EnableErrorSignal.service.EmailService;
 import com.example.enableerrorsignal.EnableErrorSignal.service.GpioServiceInterface;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,12 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class GpioController {
 
     private final GpioServiceInterface gpioService;
-    private final EmailService emailService;
+    @Autowired
+    private EmailReaderScheduler emailReaderScheduler;
 
     public GpioController(GpioServiceInterface gpioService,
                           EmailService emailService) {
         this.gpioService = gpioService;
-        this.emailService = emailService;
+        this.emailReaderScheduler = emailReaderScheduler;
     }
 
     @PostMapping("/red/blink")
