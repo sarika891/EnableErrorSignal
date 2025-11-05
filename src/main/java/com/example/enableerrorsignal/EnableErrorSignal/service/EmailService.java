@@ -19,12 +19,13 @@ public class EmailService {
     private static final Logger log = LoggerFactory.getLogger(EmailService.class);
     private final GpioServiceInterface gpioService;
     private final Set<String> processedEmails = new HashSet<>();
+    private static long numberofEmailsRead = 0;
 
     public EmailService(GpioServiceInterface gpioService) {
         this.gpioService = gpioService;
     }
 
-   // @Scheduled(initialDelay = 300000, fixedDelay = 300000) // Initial delay of 5 minutes, then runs every 5 minutes
+    // @Scheduled(initialDelay = 300000, fixedDelay = 300000) // Initial delay of 5 minutes, then runs every 5 minutes
     public void checkEmail() {
         log.info("Scheduled task triggered at: {}", Instant.now());
         log.info("===========================================");
@@ -35,7 +36,6 @@ public class EmailService {
 
             Folder inbox = getInboxFolder(emailReadingClient);
             log.info("Inbox folder opened. Total messages: {}", inbox.getMessageCount());
-
             Message[] messages = inbox.getMessages();
             log.info("Retrieved {} messages from inbox.", messages.length);
             if (didAnyErrorOccurred(messages)) {
@@ -68,12 +68,14 @@ public class EmailService {
         // Get the most recent email
         Message latestMessage = messages[messages.length - 1];
         log.info("trying to read messages...");
-        if (!latestMessage.isSet(Flags.Flag.SEEN)) { // Process only unread emails
+        log.info("Initial messages: {} and total messages in Inbox: {}:", numberofEmailsRead, messages.length);
+        if (!latestMessage.isSet(Flags.Flag.SEEN) || numberofEmailsRead < messages.length) { // Process only unread emails
             String subject = latestMessage.getSubject();
             Date sentDate = latestMessage.getSentDate();
             if (sentDate == null) {
                 sentDate = latestMessage.getReceivedDate();
             }
+
 
             log.info("Processing latest unread message - Subject: {}, Sent Date: {}", subject, sentDate);
 
@@ -86,6 +88,8 @@ public class EmailService {
 
             // Mark the email as read
             latestMessage.setFlag(Flags.Flag.SEEN, true);
+            numberofEmailsRead = messages.length;
+            log.info("Messages after reading error: {}", numberofEmailsRead);
             log.info("Marked email as read - Subject: {}", subject);
         } else {
             log.info("Latest message is already read - Subject: {}", latestMessage.getSubject());

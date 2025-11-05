@@ -24,7 +24,7 @@ public class GpioController {
 
     public GpioController(GpioServiceInterface gpioService,
                           EmailService emailService) {
-        log.info("GpioController initialized for Ashwini.");
+        log.info("GpioController initialized");
         this.gpioService = gpioService;
         this.emailReaderScheduler = emailReaderScheduler;
     }

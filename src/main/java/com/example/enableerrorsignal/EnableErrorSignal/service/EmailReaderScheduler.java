@@ -14,13 +14,13 @@ public class EmailReaderScheduler {
     private static final Logger log = LoggerFactory.getLogger(EmailReaderScheduler.class);
 
     public EmailReaderScheduler(final EmailService emailService) {
-        log.info("EmailReaderScheduler initialized for Ashwini.");
+        log.info("EmailReaderScheduler initialized.");
         this.emailService = emailService;
     }
 
     @Scheduled(fixedRate = 30000, initialDelay = 30000)
     public void checkMailboxPeriodically() {
-        log.info("check periodic email for Ashwini.");
+        log.info("check periodic email.");
         executorService.submit(() -> emailService.checkEmail());
     }
 }
