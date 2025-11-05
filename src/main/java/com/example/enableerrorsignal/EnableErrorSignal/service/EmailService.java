@@ -67,6 +67,7 @@ public class EmailService {
 
         // Get the most recent email
         Message latestMessage = messages[messages.length - 1];
+        log.info("trying to read messages...");
         if (!latestMessage.isSet(Flags.Flag.SEEN)) { // Process only unread emails
             String subject = latestMessage.getSubject();
             Date sentDate = latestMessage.getSentDate();

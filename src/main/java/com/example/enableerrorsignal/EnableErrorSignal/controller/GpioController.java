@@ -3,6 +3,8 @@ package com.example.enableerrorsignal.EnableErrorSignal.controller;
 import com.example.enableerrorsignal.EnableErrorSignal.service.EmailReaderScheduler;
 import com.example.enableerrorsignal.EnableErrorSignal.service.EmailService;
 import com.example.enableerrorsignal.EnableErrorSignal.service.GpioServiceInterface;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,12 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/gpio")
 public class GpioController {
 
+    private static final Logger log = LoggerFactory.getLogger(GpioController.class);
     private final GpioServiceInterface gpioService;
     @Autowired
     private EmailReaderScheduler emailReaderScheduler;
 
     public GpioController(GpioServiceInterface gpioService,
                           EmailService emailService) {
+        log.info("GpioController initialized for Ashwini.");
         this.gpioService = gpioService;
         this.emailReaderScheduler = emailReaderScheduler;
     }
