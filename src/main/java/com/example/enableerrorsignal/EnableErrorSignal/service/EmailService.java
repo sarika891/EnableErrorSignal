@@ -2,7 +2,6 @@ package com.example.enableerrorsignal.EnableErrorSignal.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import javax.mail.*;
@@ -67,8 +66,6 @@ public class EmailService {
 
         // Get the most recent email
         Message latestMessage = messages[messages.length - 1];
-        log.info("trying to read messages...");
-        log.info("Initial messages: {} and total messages in Inbox: {}:", numberofEmailsRead, messages.length);
         if (!latestMessage.isSet(Flags.Flag.SEEN) || numberofEmailsRead < messages.length) { // Process only unread emails
             String subject = latestMessage.getSubject();
             Date sentDate = latestMessage.getSentDate();
@@ -89,7 +86,6 @@ public class EmailService {
             // Mark the email as read
             latestMessage.setFlag(Flags.Flag.SEEN, true);
             numberofEmailsRead = messages.length;
-            log.info("Messages after reading error: {}", numberofEmailsRead);
             log.info("Marked email as read - Subject: {}", subject);
         } else {
             log.info("Latest message is already read - Subject: {}", latestMessage.getSubject());
