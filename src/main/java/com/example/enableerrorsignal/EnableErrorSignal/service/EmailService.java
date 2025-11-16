@@ -76,7 +76,7 @@ public class EmailService {
 
             log.info("Processing latest unread message - Subject: {}, Sent Date: {}", subject, sentDate);
 
-            if (sentDate != null && isMessageRecent(sentDate) && subject != null && subject.contains("Alert")) {
+            if (sentDate != null && isMessageRecent(sentDate) && subject != null && subject.contains("Alert")|| subject.contains("Accepting & Signing is reduced available")) {
                 anErrorOccurred = true;
                 log.info("Error email found - Subject: {}, Sent Date: {}", subject, sentDate);
             } else {
