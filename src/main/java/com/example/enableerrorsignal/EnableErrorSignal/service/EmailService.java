@@ -120,9 +120,9 @@ public class EmailService {
     }
 
     private Session getAuthenticationSession() {
-        String host = "mail.mailo.com";
-        String username = "paleaccidentallyconsidering@mailo.com";
-        String password = "hBWA_P492sk:";
+        String host = System.getenv("MAIL_HOST");
+        String username = System.getenv("MAIL_USERNAME");
+        String password = System.getenv("MAIL_AUTH_SECRET");
         Properties properties = new Properties();
         properties.put("mail.store.protocol", "imaps");
         properties.put("mail.imaps.host", host);
