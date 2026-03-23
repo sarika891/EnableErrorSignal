@@ -124,9 +124,6 @@ public class EmailService {
         String host = System.getenv("MAIL_HOST");
         String username = System.getenv("MAIL_USERNAME");
         String password = System.getenv("MAIL_AUTH_SECRET");
-        log.info("MAIL_USERNAME: {}", username);
-        log.info("MAIL_AUTH_SECRET present: {}", password != null);
-        log.info("MAIL_HOST: {}", host);
         if (username == null || password == null) {
           throw new IllegalStateException("Missing email credentials");
         }
