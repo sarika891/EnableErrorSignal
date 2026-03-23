@@ -123,6 +123,9 @@ public class EmailService {
         String host = System.getenv("MAIL_HOST");
         String username = System.getenv("MAIL_USERNAME");
         String password = System.getenv("MAIL_AUTH_SECRET");
+        if (username == null || password == null) {
+          throw new IllegalStateException("Missing email credentials");
+        }
         Properties properties = new Properties();
         properties.put("mail.store.protocol", "imaps");
         properties.put("mail.imaps.host", host);
