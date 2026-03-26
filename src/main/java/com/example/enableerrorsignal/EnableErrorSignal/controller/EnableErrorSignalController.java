@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@ComponentScan
+@ComponentScan(basePackages = {"com.example.enableerrorsignal.EnableErrorSignal.service"})
 @EnableScheduling
 @RequestMapping("/api")
 public class EnableErrorSignalController {

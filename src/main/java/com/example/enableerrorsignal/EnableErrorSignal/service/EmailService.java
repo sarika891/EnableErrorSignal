@@ -50,6 +50,7 @@ public class EmailService {
             emailReadingClient.close();
         } catch (MessagingException e) {
             log.error("MessagingException occurred: {}", e.getMessage());
+            log.error("MessagingException occurred full error", e);
         } catch (Exception e) {
             log.error("An unexpected error occurred: {}", e.getMessage());
         }
@@ -120,9 +121,12 @@ public class EmailService {
     }
 
     private Session getAuthenticationSession() {
-        String host = "mail.mailo.com";
-        String username = "paleaccidentallyconsidering@mailo.com";
-        String password = "hBWA_P492sk:";
+        String host = System.getenv("MAIL_HOST");
+        String username = System.getenv("MAIL_USERNAME");
+        String password = System.getenv("MAIL_AUTH_SECRET");
+        if (username == null || password == null) {
+          throw new IllegalStateException("Missing email credentials");
+        }
         Properties properties = new Properties();
         properties.put("mail.store.protocol", "imaps");
         properties.put("mail.imaps.host", host);
